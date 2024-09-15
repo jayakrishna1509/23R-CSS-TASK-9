@@ -1,0 +1,278 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110vh;
+  margin: 0;
+  overflow: hidden;
+  background-color: red !important;
+}
+
+.marquee {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: purple;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 5px 0;
+  font-size: 44px;
+  z-index: 1000;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.profile-card {
+  width: 360px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+}
+
+.header ion-icon {
+  margin-left: 5px;
+}
+
+.account-section {
+  padding: 20px;
+  text-align: left;
+}
+
+.account-section img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid black;
+}
+
+.account-info {
+  font-size: 14px;
+  font-weight: bold;
+  height: 24px;
+}
+
+.bio {
+  font-size: 10px;
+  color: gray;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 70px;
+}
+
+.stats {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  margin-top: -170px;
+}
+
+.stats div {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.stats div strong {
+  display: block;
+  font-size: 16px;
+}
+
+.button {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+.stories {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+.story-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5px;
+  position: relative;
+}
+
+.story-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.story-item small {
+  margin-top: 5px;
+  font-size: 12px;
+  color: black;
+}
+
+.story-item ion-icon {
+  padding: 0px;
+  border-radius: 50%;
+  border: 2px solid black;
+  font-size: 55px;
+  color: black;
+}
+
+.nav-pills {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  list-style-type: none;
+}
+
+.nav-item {
+  margin: 0 10px;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.tab-content {
+  padding: 10px;
+}
+
+.tab-pane {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  overflow-y: auto;
+  max-height: 150px;
+  max-width: 400px;
+}
+
+.tab-pane .item {
+  flex: 0 0 auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+
+.tab-pane .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-top: 1px solid #dbdbdb;
+}
+
+.footer-menu ion-icon {
+  font-size: 1.5em;
+  color: #888;
+}
+
+.home {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+  background-color: black;
+}
+
+.home ion-icon {
+  color: white;
+  font-size: 1em;
+}
+
+.account {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.account h3 {
+  font-size: 16px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.account ion-icon {
+  margin-right: 44px;
+  font-size: 18px;
+}
+
+.profile-card:hover .account,
+.profile-card:hover .account-section,
+.profile-card:hover .bio,
+.profile-card:hover .count,
+.profile-card:hover .button,
+.profile-card:hover .stories,
+.profile-card:hover .nav-pills,
+.profile-card:hover .tab-pane,
+.profile-card:hover .footer-menu {
+  background-color: black;
+  color: white;
+}
+
+.profile-card:hover .account h3,
+.profile-card:hover .stats div span,
+.profile-card:hover .button button,
+.profile-card:hover .stories small,
+.profile-card:hover .nav-link,
+.profile-card:hover .footer-menu ion-icon {
+  color: white;
+}
+
+.profile-card:hover .account ion-icon,
+.profile-card:hover .story-item ion-icon,
+.profile-card:hover .footer-menu ion-icon {
+  color: white;
+}
+
+.profile-card:hover .tab-pane .item img {
+  border: 2px solid white;
+}
